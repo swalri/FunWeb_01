@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+/* welcome.jsp ui */
+/* 서브 메인 이미지 */
+#sub_img{
+	width:971px; height:179px;
+	background-image:url(../images/company/sub_back.png); /*배경이미지 경로*/
+	background-repeat: no-repeat; /*배경이미지 반복 안하기 */
+	background-position: left top; /*배경이미지 위치지정*/
+}
+
+/*서브 메뉴 */
+#sub_menu{
+	width:238px; float:left; margin:20px; border:0px solid #ccc; font-size:1em;
+}
+#sub_menu ul{
+	list-style:none; /*목록앞 마커 점 없애기 */ margin:20px 0px 0px 10px;
+}
+#sub_menu a{
+	text-decoration: none; color:#666; display:block; height:15px; width:150px;
+	padding:7px;
+	border-bottom-width: 1px; /*밑줄 선 두께 */
+	border-bottom-style:dotted; /*밑줄 점선 */
+	border-bottom-color:#999; /*밑줄선 색 */
+	background-image:url(../images/bullet.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+#sub_menu a:hover{
+	background-image:url(../images/bullet_orange.gif);
+	background-repeat:no-repeat;
+	background-position: right center; 
+	color:#F90;
+}
+
+/* 서브 메인 본문 UI */
+#sub_main_cont{
+	width:675px; border:0px solid #ccc; float:right; margin-right:15px;
+}
+#sub_main_cont h1{
+	font-family:"궁서체";
+	font-size:45px; color:#ccc; 
+	margin:20px 0px; /* 상하 바깥 여백은 20픽셀로 지정 , 좌우 바깥 여백은 0픽셀로 처리 */
+	font-weight:normal;
+}
+#sub_main_cont p{
+	padding-left:10px; /*왼쪽 안 여백을 10픽셀로 지정해서 들여쓰기 효과를 준다. */
+}
+figure.ceo{
+	float:right; /* 그림을 오른쪽에 배치하고, 문자를 자연스럽게 왼쪽에 배치 */
+	margin:5px;
+}
+figcaption{
+	text-align: center; color:#39F; font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

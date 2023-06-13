@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+/* index.jsp ui */
+body{
+	background-color:#898989; /*본문 배경색 */
+	margin:0px; /*상하좌우 바깥여백을 0픽셀*/
+	padding:0px; /*상하좌우 안여백을 0픽셀 */
+	font-size:0.75em; /*글자크기*/
+	line-height:1.2em; /*수직정렬*/	
+	color:#333; /*#333333 16진수 색상코드를 줄여서 표현한 것이다. 글자색을 지정*/
+}
+#wrap{
+	width:971px; text-align:left; /*글자 수평 왼쪽 정렬*/ margin:0px;
+	margin-left:auto; margin-right:auto; /* div는 가로줄 전체를 차지하는 블록수준 요소태그이다. 이 태그에 
+	일정 너비를 지정하고 수평 좌우 중앙정렬을 할때 사용한다. */
+	background-image:url(../images/shadow.png);/*배경이미지*/
+	background-repeat: repeat-y; /* y축방향으로 반복 */
+	min-height:940px; /*최소높이 지정*/
+}
+#logo{
+	float:left;/*왼쪽에 배치*/
+	width:265px; margin:60px 0px 0px 40px; /*시계방향으로 위,오른쪽,아래쪽,왼쪽 바깥여백을 한꺼번에 지정*/
+}
+header{
+	height:151px;
+}
+nav{
+	width:600px; margin:70px 20px 0px 0px; float:right;/*오른쪽 배치*/ 
+}
+nav ul{
+	list-style:none; /* 목록앞 마커 없애기 */
+	font-family: verdana,Geneva,sans-serif; /*글꼴지정*/
+	font-size:13px; font-weight:100; /*글자를 진하게*/
+	color:#333;/*글자색*/
+}
+nav ul li{
+	float:left; /*수직목록을 수평목록으로 변경*/
+	margin:0px 5px; /*상하 바깥여백을 0픽셀,좌우 바깥여백을 5픽셀로 처리 */	
+}
+nav a{
+	display: block; height:20px; padding:10px;
+	text-decoration: none; /*하이퍼링크가 걸리면 밑줄선이 기본값으로 나온다.이 밑줄선을 제거 */
+	color:#333;
+}
+nav a:hover{ /*하이퍼링크 된곳 마우스 오버시 css효과*/
+	background-image:url(../images/blue.gif); /*배경이미지*/
+	background-repeat:repeat-x; /*수평방향 x축으로 반복*/
+	background-position:bottom; /*밑에 배치*/
+}
+.clear{
+	clear:both; /* float속성을 제거함으로써 ui깨지는 현상을 막아줌 */
+}
+#login{
+	float:right; margin:20px 64px 0px 0px;
+	font-family:Arial,Helvetica,sans-serif; font-size:12px; 
+	word-spacing:5px; /*단어사이의 간격 지정*/
+}
+#login a{
+	text-decoration: none; /*하이퍼링크 된곳 밑줄 선 제거*/ color:#333;
+}
+#login a:hover{
+	color::#F90; /* #F90; 16진수 색상코드는 #ff9900;을 줄여서 표현 */
+}
+
+/*메인 이미지 */
+#main_img{
+	width:971px; height:308px;
+	background-image:url(../images/img_back.png);
+	background-repeat: no-repeat; /*배경이미지 반복안함*/
+	background-position: center top;
+}
+/* 문제) img_back.png 메인 이미지위에 main_img.jpg이미지로 덮어쓰면 위로 올라간다. 이것을 아래로 내려서 밑의
+이미지가 안보이게 처리해보자. */
+#main_img img{
+	margin:10px 0px 0px 0px; /*시계방향으로 위,오른쪽,아래쪽,왼쪽 바깥여백을 지정*/
+}
+
+/*index.jsp 메인본문 ui */
+article#main_cont{
+	margin:5px 0px 5px 0px;
+}
+#solution{
+  border:solid 1px red; border-radius:10px; /*css3에서 추가된 속성으로 테두리를 둥글게 처리 */
+  width:910px; min-height:100px; background:#ebebeb; padding:10px;	
+  margin:0px 0px 0px 20px;
+}
+#hosting, #security, #payment{
+  width:30%; /* %단위는 상대적 크기 */
+  float:left; /*복수개의 div수직정렬을 수평정렬로 배치 */ padding:10px;
+}
+/* 문제)div id="solution" 레이아웃이 왼쪽으로 벗어난다. 이 부분을 해결하는 css속성을 추가해 보자.*/
+
+#hosting h3, #security h3, #payment h3{
+	font-size:14px; font-weight:600; /*글자를 진하게 */
+	color:#333; margin:0px 0px 10px 80px;
+}
+#hosting p, #security p, #payment p{
+	font-size:12px; color:#333; margin:0px 0px 0px 80px;
+}
+#hosting{
+	background-image:url(../images/icon1.png);
+	background-repeat:no-repeat;
+	background-position:left 15px;
+	border-right:1px solid #ccc; /*오른쪽 경계선 */
+}
+#security{
+	background-image:url(../images/icon2.png);
+	background-repeat: no-repeat;
+	background-position: left 15px;
+	border-right:1px solid #ccc;
+	margin-left:10px;
+}
+#payment{
+	background-image:url(../images/icon3.png);
+	background-repeat:no-repeat;
+	background-position:left 15px;
+	margin-left:10px;
+}
+#sec_news, #news_notice{
+	float:left; width:420px; margin:15px 0px 0px 40px;
+}
+#sec_news h3, #news_notice h3{
+	font-size:14px; font-style:italic; /*기울임*/ font-weight:normal; 
+	width:420px; height:24px; 
+	background-image:url(../images/h3_back.jpg); background-repeat:no-repeat;
+	padding:5px 0px 0px 22px;
+}
+#sec_news .orange{
+	color:#F26522;
+}
+#news_notice .brown{
+	color:#827b00;
+}
+#sec_news dl{
+	margin-left:6px;
+}
+#sec_news dt{
+	font-size:14px; margin:5px 0px; color:#f00;
+}
+#sec_news dd{
+	margin-left:0px; /* dd태그는 바깥 왼 여백이 발생한다. 이 여백을 제거해서 들여쓰기를 안하게 함. */
+	color:#333;
+}
+#sec_news dt a{
+	color:#F00; text-decoration: none; /*하이퍼링크 된곳 밑줄선 제거 */
+}
+#sec_news dt a:hover{ /*하이퍼링크 된곳 마우스 오버시 css효과 */
+	color:#F90; text-decoration: underline; /*밑줄선 나오게 하기 */
+}
+#sec_news dd a{
+	color:#333; text-decoration: none; 
+}
+#sec_news dd a:hover{
+	color:#F90; text-decoration: underline;
+}
+#news_notice table{
+	width:400px; border-collapse: collapse; /* 셀의 경계선을 합쳐서 단일선으로 표시 */
+	text-align: center; /* 글자 좌우 수평중앙 정렬 */
+}
+#news_notice td{
+	border-bottom-width:1px; /*밑줄선 두께 */
+	border-bottom-style:dotted; /*밑줄 점선 */
+	border-bottom-color:#999; /*밑줄 점선 색 */
+	padding:6px 4px; /*상하 안여백을 6픽셀, 좌우 안여백을 4픽셀 */
+}
+#news_notice td.contxt{
+	background-image:url(../images/tr_back.gif);
+	background-repeat:no-repeat;
+	background-position: left center;
+	padding-left:15px; text-align: left; /*글자 수평 왼쪽 정렬*/
+	color:#333;
+}
+#news_notice a{
+	color:#333; text-decoration: none;
+}
+#news_notice a:hover{
+	color:#f90; text-decoration: none;
+}
+
+/* css주석문 기호->index.jsp footer 하단 영역 ui */
+footer{
+	margin:50px 0px 0px 0px;
+	height:80px; 
+	background-image:url(../images/under_logo.gif);
+	background-repeat: no-repeat;
+	background-position: 40px center;
+}
+footer hr{
+	width:900px; /*수평선 너비 */
+}
+#copy{
+	width:450px; margin:20px 0px 0px 190px; float:left;
+}
+#social{
+	width:130px; margin:20px 20px 0px 0px; float:right;
+}
+#social img{
+    margin:0px 7px; /*상하 바깥여백은 0픽셀, 좌우 바깥여백은 7픽셀로 처리 */	
+}
+
+
+
+

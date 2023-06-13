@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+/* join.jsp ui */
+/* 문제)회원관리 서브 메인 이미지를 배치해 보자 */
+#sub_img_member{
+	width:971px; height:179px;
+	background-image:url(../images/member/sub_back.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+}

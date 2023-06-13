@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+/* notice.jsp ui */
+/* 서브 메인 이미지 */
+#sub_img_center{
+	width:971px; height:179px;
+	background-image:url(../images/center/sub_back.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#notice{
+	width:670px; border-collapse: collapse;
+}
+#notice th{
+	height:20px; padding:5px; font-size:14px; font-weight:bold; /*글자를 진하게*/
+	/*문제)각 열 제목 영문자 첫글자만 영문대문자로 변경하는 css속성을 사용해 보자. */
+	text-transform: capitalize; /*영문단어 첫글자만 대문자로 변경 */
+	/* 문제) ../images/center/t_back.jpg 이미지가 있다. 이미지를 정중앙 배치하여 고객 게시판 제목 배경으로
+	해서 수평 x축으로 반복해서 배치해 보자.
+	*/
+	background-image:url(../images/center/t_back.jpg);
+	background-repeat:repeat-x; /*수평 x축으로 반복 */
+	background-position:center center;
+	color:#FFF;
+}
+#notice td{
+	/*문제) 글자를 수평 중앙 정렬, 상하 안여백은 6픽셀,좌우 안여백은 0픽셀, 밑줄 점선을 1픽셀,점선색을 #999로 표현해
+	보자. */
+	text-align: center; /*글자를 수평 좌우 중앙정렬 */
+	padding:6px 0px; 
+	border-bottom-width:1px; /*밑줄 점선 두께를 1픽셀 */
+	border-bottom-style:dotted; /*밑줄 점선 */
+	border-bottom-color:#999; /*밑줄 선 색*/
+}
+
+/* 문제)Title부분이 중앙정렬이 되어서 보기가 좋지 않다. 왼쪽 정렬 시키고,안여백을 14픽셀로 지정해서 들여쓰기 처리해서 보기
+좋게 만들어 본다.*/
+#notice td.left{
+	text-align:left; padding-left:14px;
+}
+/* 문제)클래스 선택자 tno를 활용해서 테두리 좌상단,좌하단을 5픽셀 둥글게 처리해 보고 너비를 50픽셀로 지정하자. */
+#notice .tno{
+	width:50px;
+	border-top-left-radius: 5px; /*테두리 좌상단을 5픽셀 둥글게 처리 */
+	border-bottom-left-radius: 5px;/*테두리 좌하단을 5픽셀 둥글게 처리 */
+}
+/* 문제)클래스 선택자 ttitle을 활용해서 너비를 400픽셀, 글자 간격을 0.7em으로 조절해 보자 */
+#notice .ttitle{
+	width:400px; letter-spacing:0.7em;
+}
+#notice .twrite{
+	width:100px;
+}
+#notice .tdate{
+	width:50px;
+}
+#notice .tread{
+	width:50px;
+	/* 문제)오른쪽 상단 테두리를 5픽셀 둥글게, 오른쪽 하단 테두리를 5픽셀 둥글게 처리하는 css3속성을 지정해 보자.
+	*/
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+/* 문제)검색어 입력폼과 search부분 아이디 선택자 table_search를 활용해서 오른쪽에 배치하고, 바깥위쪽 여백 15픽셀,바깥
+오른쪽 여백 5픽셀,바깥 아래쪽 여백 10픽셀,바깥 왼쪽 여백 0픽셀로 css처리하자.
+*/
+#table_search{
+	float:right; margin:15px 5px 10px 0px;
+}
+#table_search .input_box{
+	width:200px; height:20px; border:1px solid #333; border-radius:10px; /*테두리를 둥글게 처리
+	하는 css3 속성 */ background-color:#FEFDED; 
+}
+#table_search .btn{
+	width:90px; height:23px; margin:0px 0px 0px 5px; padding:2px;
+	border:1px solid #999; color:#FFF; border-radius:10px;
+	background-image:url(../images/center/t_back.jpg);
+	background-repeat:repeat-x;
+	background-position: center center;
+}
+#page_control{
+	text-align:center; margin-top:20px; /*바깥 상단 여백 20픽셀 지정 */
+}
+#page_control a{
+	text-decoration: none; padding:2px 5px; margin:0px 5px; color:#333;
+}
+#page_control a:hover{
+	text-decoration: underline; font-weight:bold; color:#F90;
+}
+/* 문제) 게시판 제목 리스트에 마우스 오버시 배경색을 오렌지색 또는 #EEFDFF;으로 나오게 해주고,동시에 손가락 모양으로
+ 표현되게 해보자. */
+#notice tr:hover{
+	background-color:#80ff80; cursor: pointer; /* 손가락 모양 나오게 하기 */
+}
+
+
+
+
+
